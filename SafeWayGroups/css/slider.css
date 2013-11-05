@@ -1,0 +1,167 @@
+﻿a.learn-more {
+  border-bottom-color:#FFFFFF;
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  color:#FFFFFF;
+  display:block;
+  float:right;
+  font-size:11px;
+  height:26px;
+  margin:10px 0;
+  text-decoration:none;
+  width:112px;
+}
+table#options .left {
+  width:150px;
+}
+#content h1 {
+  color:#257B22;
+  font-size:26px;
+  line-height:30px;
+  text-transform:uppercase;
+}
+#content h2 {
+  margin:5px 0 10px;
+}
+h2 a {
+  color:#668134;
+  text-decoration:none;
+}
+h3 {
+  font-size:17px;
+}
+#feature {
+  float:left;
+  height:294px;
+  margin:auto;
+  overflow:hidden;
+  position:relative;
+  width:948px;
+}
+.scrollable {
+  height:294px;
+  overflow:hidden;
+  position:relative;
+  width:948px;
+}
+.nav-scroll {
+  bottom:0;
+  height:50px;
+  position:absolute;
+  right:30px;
+  width:300px;
+  z-index:100;
+}
+.navi {
+  float:left;
+  padding:6px 11px 0;
+  width:auto;
+}
+.navi a {
+  display:block;
+  float:left;
+  font-size:1px;
+  height:13px;
+  margin:0 6px;
+  width:12px;
+}
+.scrollable {
+  float:left;
+}
+#feature a.browse {
+  cursor:pointer;
+  display:block;
+  float:left;
+  font-size:1px;
+  height:25px;
+  width:26px;
+}
+.scrollable .items {
+  clear:both;
+  position:absolute;
+  width:20000em;
+}
+.items .item {
+  float:left;
+  height:294px;
+  position:relative;
+  width:948px;
+  z-index:1;
+}
+.items .item .image {
+  position:absolute;
+  z-index:10;
+}
+.items .item .copy {
+  padding-top:20px;
+  position:absolute;
+  right:0;
+  width:335px;
+  z-index:30;
+}
+.items .item .copy h1 {
+  font-size:24px;
+  font-weight:normal;
+  letter-spacing:1px;
+  line-height:30px;
+  margin:5px 15px 16px 0;
+}
+.items .item .copy p {
+  font-size:12px;
+  letter-spacing:0.5px;
+  line-height:18px;
+  margin-bottom:7px;
+  margin-right:75px;
+  width:307px;
+}
+.items .item .copy .learn-more {
+  display:block;
+  height:19px;
+  margin:8px 25px 5px;
+  text-align:right;
+  width:310px;
+}
+.items .item .overlay {
+  height:294px;
+  position:absolute;
+  right:0;
+  width:948px;
+  z-index:20;
+}
+.items .select.item .copy h1 {
+  color:#FFFFFF;
+}
+.items .select.item .copy p {
+  color:#FFFFFF;
+}
+.items .select.item .overlay {
+  background-image:url(http://www.safewaygroups.com/images/feature-overlay-select.png);
+  background-position:100% 0;
+  background-repeat:no-repeat no-repeat;
+}
+.items .premier.item .copy h1 {
+  color:#FFFFFF;
+}
+.items .premier.item .copy p {
+  color:#FFFFFF;
+}
+.items .premier.item .copy .learn-more {
+}
+.items .premier.item .overlay {
+  background-image:url(http://www.safewaygroups.com/images/feature-overlay-premier.png);
+  background-position:100% 0;
+  background-repeat:no-repeat no-repeat;
+}
+.items .elite.item .copy h1, .items .elite2.item .copy h1, .items .elite3.item .copy h1, .items .elite4.item .copy h1 {
+  color:#FFFFFF;
+}
+.items .elite.item .copy p, .items .elite2.item .copy p, .items .elite3.item .copy p, .items .elite4.item .copy p {
+  color:#FFFFFF;
+}
+.items .elite.item .copy .learn-more {
+}
+.items .elite.item .overlay, .items .elite2.item .overlay, .items .elite3.item .overlay, .items .elite4.item .overlay {
+  background-image:url(http://www.safewaygroups.com/images/feature-overlay-elite.png);
+  background-position:100% 0;
+  background-repeat:no-repeat no-repeat;
+}

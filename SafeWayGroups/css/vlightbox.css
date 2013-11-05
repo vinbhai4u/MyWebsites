@@ -1,0 +1,9 @@
+﻿#vlightbox { width:100%; height:auto; float:left; }
+#vlightbox span{ display:block; }
+#vlightbox a{ display:block; float:left;width:180px; height:113px;margin: 0 25px 25px 0; padding:5px; border:solid 1px #b8b8b8;
+background-color:#f4f5f5;opacity:0.87; }
+#vlightbox a img{ display:block; border:none; margin:0px; }
+#vlightbox a:hover{ opacity:1; }
+#vlightbox a.vlightbox_hidden{ display:none; }
+#vlightbox a img { border:medium none; margin:0 auto;width:180px; height:113px; }
+#vlightbox a.last{margin:0px!important;}

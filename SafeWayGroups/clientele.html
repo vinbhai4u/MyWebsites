@@ -1,0 +1,607 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Liwa::Clientele::</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie7.css">
+        
+    <![endif]-->
+    <!--[if IE 8]>
+    	<style>
+    
+    
+    	</style>
+    <![endif]-->
+    <!--[if gte IE 8]>
+    	<link rel="stylesheet" type="text/css" href="css/ie8-and-up.css" />
+    <![endif]-->
+    <!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="css/ie6.css">
+<![endif]-->
+    <!--------------for navigation------------->
+    <link rel="stylesheet" type="text/css" href="css/flexdropdown.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/flexdropdown.js"></script>
+    <!--------for gallery------------>
+    <link rel="stylesheet" href="css/visuallightbox.css" type="text/css" />
+    <link rel="stylesheet" href="css/vlightbox.css" type="text/css" />
+    <style type="text/css">
+        #vlightbox img
+        {
+            background-color: #f4f5f5;
+            border: 1px solid #b8b8b8;
+            display: block;
+            float: left;
+            height: 100px;
+            margin: 0 25px 25px 0;
+            padding: 5px;
+            width: 165px;
+        }
+    </style>
+    <!------for accordian------->
+    <script type="text/javascript" src="scripts/script-client.js"></script>
+    <style>
+        div#abt-lft
+        {
+            width: 220px;
+            float: left;
+        }
+        ul#side-link
+        {
+        }
+        ul#side-link li
+        {
+            list-style: none;
+            background: #605f5f;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border-bottom: #fff solid thin;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+        ul#side-link li a
+        {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 2px;
+            display: block;
+        }
+        ul#side-link li a.selected
+        {
+            color: #faaf30;
+        }
+        div#abt-rgt
+        {
+            width: 700px;
+            float: right;
+        }
+        .show
+        {
+            display: block;
+        }
+        .hidden
+        {
+            display: none;
+        }
+        ul#inner-list
+        {
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+        ul#inner-list li
+        {
+            font-size: 13px;
+            color: #000;
+            list-style: none;
+        }
+        ul#inner-list2
+        {
+            margin: 5px 0px;
+            font-size: 13px;
+            color: #fff;
+        }
+        ul#inner-list2 li
+        {
+            font-size: 11px;
+            color: #fff;
+            list-style: url(http://www.safewaygroups.com/images/lst-img.png);
+        }
+        ul#inner-list3
+        {
+            margin: 5px 0px;
+            font-size: 13px;
+            color: #fff;
+        }
+        ul#inner-list3 li
+        {
+            font-size: 14px;
+            color: #fff;
+            list-style: url(http://www.safewaygroups.com/images/lst-img.png);
+        }
+        span#list-head
+        {
+            clear: both;
+            color: #014774;
+            font-size: 13px;
+            margin-left: 20px;
+        }
+        div#cont-bg
+        {
+            width: 930px;
+            background: url(http://www.safewaygroups.com/images/abt-bg.png) no-repeat bottom left;
+            margin: 0 auto;
+            clear: both;
+        }
+        div#cntct-lft
+        {
+            width: 250px;
+            float: left;
+        }
+        div#cntct-rgt
+        {
+            width: 670px;
+            float: right;
+        }
+        span#contct-head
+        {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        div#addrss
+        {
+            clear: both;
+            margin-right: 30px;
+            border-top: #7ac3dd solid thin;
+        }
+        div#fdbk
+        {
+            clear: both;
+        }
+        .fdbk_txt
+        {
+            width: 210px;
+            font-size: 12px;
+            border: #0b6e9f solid thin;
+            padding: 2px;
+            background-color: #70cdee;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+        }
+        .fdbk_txtarea
+        {
+            width: 300px;
+            font-size: 12px;
+            border: #0b6e9f solid thin;
+            padding: 2px;
+            background-color: #70cdee;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+        }
+        .fdbk-btn
+        {
+            background-color: #70cdee;
+            padding: 2px 5px;
+            border: #0b6e9f solid thin;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .fdbk-btn:hover
+        {
+            background-color: #24a0cb;
+            color: #fff;
+        }
+        ul#fdbk_list
+        {
+            margin-top: 15px;
+            padding-left: 15px;
+        }
+        ul#fdbk_list li
+        {
+            list-style: none;
+            color: #fff;
+            font-size: 11px;
+        }
+        table#fdbk_table
+        {
+            border-spacing: 0px;
+            margin-top: 20px;
+            clear: both;
+            margin-bottom: 15px;
+        }
+        table#fdbk_table td
+        {
+            vertical-align: top;
+            padding: 3px 0px;
+            color: #fff;
+            font-size: 13px;
+            padding-left: 15px;
+        }
+        div#adrss-lft
+        {
+            width: 300px;
+            float: left;
+        }
+        div#adrss-rgt
+        {
+            width: 260px;
+            float: left;
+        }
+        table#tabl-map
+        {
+            border-spacing: 0px;
+            padding: 5px 0px;
+        }
+        table#tabl-map td
+        {
+            padding-left: 15px;
+            clear: both;
+        }
+        p#turtles_caption
+        {
+            font-size: 12px;
+            color: #5c5b5b;
+        }
+    </style>
+</head>
+<!--homepage background image-->
+<body id="inner">
+    <!--main div start-->
+    <div class="main">
+        <!--wrapper div start-->
+        <div class="wrapper">
+            <div id="top-main">
+                <!--logo div-->
+                <div id="logo-top">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="liwa group logo" width="150" height="78" border="0"
+                            longdesc="http://www.safewaygroups.com" /></a></div>
+                <!--navigation div start-->
+                <div class="nav-main">
+                    <div class="nav">
+                        <span>
+                            <ul>
+                                <!--<li><a href="index.html">Home</a></li>-->
+                                <li><a class="active" href="profile.html" data-flexmenu="flexmenu1">Profile</a></li>
+                                <!--HTML for submenu-->
+                                <ul id="flexmenu1" class="flexdropdownmenu">
+                                    <li><a href="ourmission.html">Mission &amp; Vision</a></li>
+                                    <li><a href="profile.html">Company Profile</a></li>
+                                    <!--<li><a href="highprofileobj.html">High Profile Objectives</a></li>-->
+                                    <li><a href="chairmanmessage.html">Chairman's Message</a></li>
+                                    <li><a href="aboutchairman.html">About Chairman</a></li>
+                                    <!--<li><a href="testimonials.html">Testimonials</a></li>-->
+                                    <li><a href="downloads.html">Downloads</a></li>
+                                </ul>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="liwagroup.html">Technology provider</a></li>
+                                <!--html for submenu-->
+                                <!--<ul id="flexmenu3" class="flexdropdownmenu">
+                            <li><a href="chemicals.html">Chemicals</a></li>
+                            <li><a href="petroleum.html">Petroleum</a></li>
+                            <li><a href="industrialsupplies.html">Industrial Supplies</a></li>
+                            </ul>-->
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <!--<li><a href="careers.php">Careers</a></li>-->
+                                <li><a href="contact.html" data-flexmenu="flexmenu4">Contact</a></li>
+                                <!--html for submenu-->
+                                <!--<ul id="flexmenu4" class="flexdropdownmenu">
+                            <li><a href="contactform.php">Enquiry form</a></li>
+                            </ul>-->
+                            </ul>
+                            <script>                                $(function () { $(".nav span ul li:last-child").css("background", "none") })</script>
+                        </span>
+                    </div>
+                </div>
+                <!--navigation div end-->
+            </div>
+            <!--banner div start-->
+            <div id="banner-main" class="innerheight">
+                <div id="banner" class="in-banner">
+                    <div id="banner-inner" class="inn">
+                        <img src="images/banner-clientele3.jpg" width="948" height="174" />
+                    </div>
+                </div>
+            </div>
+            <!--banner div end-->
+        </div>
+        <!--wrapper div end-->
+        <!--content div start-->
+        <div class="content grey">
+            <div class="wrapper">
+                <div class="col-mid">
+                    <div class="mod">
+                        <h2 class="heading">
+                            Clientele</h2>
+                        <div class="clr border">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <!--col mid start-->
+                <div class="col-mid">
+                    <div class="mod">
+                        <p class="desc">
+                            We offer services to facilitate all hierarchial levels and functions. Our clients
+                            include top companies in diverse industries of UAE - Oil and Gas, Construction,
+                            Manufacturing and Services. Quick references of our major clients are
+                        </p>
+                        <div style="float: left; clear: both; width: 100%; letter-spacing: 0.5px;">
+                            <div id="abt-lft">
+                                <ul id="side-link">
+                                    <li><a onclick='show("mission-cnt")' id="mission-cnt_menu" class="selected" href="javascript:show('mission-cnt')">
+                                        Our Clients</a></li>
+                                    <!--<li><a onclick='show("values-cnt")' id="values-cnt_menu" href="javascript:show('values-cnt')">Principal Companies</a></li>-->
+                                    <li><a href="principals.html">Principal Companies</a></li>
+                                    <!--<li><a onclick='show("qms-cnt")' id="qms-cnt_menu" href="javascript:show('qms-cnt')">Products</a></li>
+                                <li><a onclick='show("environmental-cnt")' id="environmental-cnt_menu" href="javascript:show('environmental-cnt')">Technology Provider</a></li>-->
+                                    <!--<li><a onclick='show("ohsas-cnt")' id="ohsas-cnt_menu" href="javascript:show('ohsas-cnt')">OHSAS Policy</a></li>-->
+                                </ul>
+                            </div>
+                            <div id="abt-rgt">
+                                <div id="mission-cnt" class="show" style="height: 400px;">
+                                    <div id="vlightbox">
+                                        <img src="images/clients/adnoc.jpg" />
+                                        <img src="images/clients/emal.jpg" />
+                                        <img src="images/clients/adma.jpg" />
+                                        <img src="images/clients/arabian-power-company.jpg" />
+                                        <img src="images/clients/esnaad.jpg" />
+                                        <img src="images/clients/nmdc.jpg" />
+                                        <img src="images/clients/npcc.jpg" />
+                                        <img src="images/clients/irshad.jpg" />
+                                        <img src="images/clients/enec.jpg" />
+                                        <img src="images/clients/adgas.jpg" />
+                                        <img src="images/clients/gasco.jpg" />
+                                        <img src="images/clients/fertil.jpg" />
+                                        <img src="images/clients/adnip-logo.jpg" />
+                                        <img src="images/clients/adac.jpg" />
+                                        <img src="images/clients/arabicHead2.jpg" />
+                                        <img src="images/clients/emirates-steel.jpg" />
+                                        <img src="images/clients/dubal.jpg" />
+                                        <img src="images/clients/borouge.jpg" />
+                                        <img src="images/clients/arabicHead.jpg" />
+                                        <img src="images/clients/masdar.jpg" />
+                                        <img src="images/clients/petrofac-emirates.jpg" />
+                                        <img src="images/clients/Transco.jpg" />
+                                        <img src="images/clients/logo_ducab.png" />
+                                        <img src="images/clients/eswpc.jpg" />
+                                        <img src="images/clients/tapco.jpg" />
+                                        <img src="images/clients/h1-logo.png" />
+                                        <img src="images/clients/ngsco_logo.jpg" />
+                                        <img src="images/clients/logo_ndc.jpg" />
+                                        <img src="images/clients/gulf-total-tractebel-power.jpg" />
+                                        <img src="images/clients/al-hosn-gas.jpg" />
+                                        <img src="images/clients/EmiratesCMS.jpg" />
+                                        <img src="images/clients/takreer.jpg" />
+                                        <img src="images/clients/fujairah-f2.jpg" />
+                                        <img src="images/clients/fewalogo.jpg" />
+                                        <img src="images/clients/adssc.jpg" />
+                                    </div>
+                                </div>
+                                <!--<div id="values-cnt" class="hidden">                        	
+                            
+                            <div id="vlightbox">
+            		
+                    <img src="images/principle-logos/logo-ilva.jpg" alt="ILVA" border="0" />
+                   
+                    <img src="images/principle-logos/L-&-T.jpg" alt="L&amp;T" border="0" /> 
+                    
+                    <img src="images/principle-logos/Aztech.jpg" alt="Aztech" border="0" />
+                    
+                    <img src="images/principle-logos/Oxifree.jpg" alt="Oxifree" border="0" />
+                   
+                   <img src="images/principle-logos/logo-me&c.jpg" alt="ME&amp;C" border="0" /> 
+                   
+                   <img src="images/principle-logos/logo-forship.jpg" alt="Forship" border="0" />   
+                   
+                   <img src="images/principle-logos/logo-hmsweb.jpg" alt="HMS WEB" border="0" />
+                   
+                   <img src="images/principle-logos/Mauria.jpg" alt="Mauria Udyog" border="0" />
+                   
+                   <img src="images/principle-logos/Shiv-ani.jpg" alt="Sivani" border="0" />
+                   <img src="images/principle-logos/Unicat.jpg" alt="Unicat" border="0" />
+                   <img src="images/principle-logos/Radiant.jpg" alt="Radiant" border="0" />
+                   <img src="images/principle-logos/Oilman.jpg" alt="Oilman" border="0" />
+                   <img src="images/principle-logos/Prozap.jpg" alt="Prozap" border="0" />
+                   <img src="images/principle-logos/Hat-Internatioanl.jpg" alt="Hat-International" border="0" />
+                   <img src="images/principle-logos/Capture.jpg" alt="Spiremeter" border="0" />
+                   <img src="images/principle-logos/ASIKECO.jpg" alt="Analytical Systems" border="0" />
+                   <img src="images/principle-logos/CPPE.jpg" alt="CPPE" border="0" />
+                    
+                    <img src="images/principle-logos/hypro.jpg" alt="Hypro" border="0" />
+                   
+                    <img src="images/principle-logos/yoke.jpg" alt="Yoke" border="0" />
+                    
+                     <img src="images/principle-logos/Vanasa.jpg" alt="Vanasa" border="0" />
+                    
+                     <img src="images/principle-logos/Tecsia.jpg" alt="Tecsia" border="0" />
+                    
+                    <img src="images/principle-logos/Jasubhai.jpg" alt="Jasubhai" border="0" />
+                     
+                    <img src="images/principle-logos/Indcon.jpg" alt="Indcon" border="0" />
+                    
+                    <img src="images/principle-logos/Progreen.jpg" alt="Progreen" border="0" />
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+    </div>
+            	
+                            
+                            
+                            
+                            
+                           
+                            </div>-->
+                            </div>
+                        </div>
+                        <!--<table width="97%" border="0" cellspacing="10" cellpadding="0">
+  <tr>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;">
+    <img src="images/clients/adnoc.jpg" />
+    </td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;">
+    <img src="images/clients/emal.jpg" />
+    </td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"><img src="images/clients/adma.jpg" /></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"> <img src="images/clients/arabian-power-company.jpg" /></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"> <img src="images/clients/esnaad.jpg" /></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"><img src="images/clients/nmdc.jpg" /></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"><img src="images/clients/npcc.jpg" /></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"><img src="images/clients/irshad.jpg" /></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"><img src="images/clients/enec.jpg" /></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"><img src="images/clients/adgas.jpg" /></td>
+  </tr>
+  
+   <tr>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"><img src="images/clients/gasco.jpg" /></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"><img src="images/clients/fertil.jpg" /></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+  </tr>
+  
+  <tr>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+  </tr>
+  
+  <tr>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+  </tr>
+  
+  <tr>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+  </tr>
+  
+  <tr>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+    <td align="center" valign="top" style="background:#FFF; vertical-align:middle;"></td>
+  </tr>
+ 
+           </table>-->
+                    </div>
+                </div>
+                <!--col mid end-->
+            </div>
+        </div>
+        <!--content div end-->
+        <!--footer div start-->
+        <div class="foot">
+            <div class="content footer-main">
+                <div class="wrapper">
+                    <!--left col start-->
+                    <div class="foot-left">
+                        <div class="mod">
+                            <h2 class=" white">
+                                Quick Tags</h2>
+                            <div class="clr border">
+                            </div>
+                            <ul class="list-arr-footer">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="liwagroup.html">Technology provider</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                            <ul class="list-arr-footer">
+                                <!--<li><a href="careers.php">Careers </a></li>-->
+                                <li><a href="clientele.html">Clientele </a></li>
+                                <!--<li><a href="#">News &amp; Updates</a></li>-->
+                                <li><a href="sitemap.html">Sitemap </a></li>
+                                <!--<li><a href="contactform.php">Enquiries</a></li>-->
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                            <ul class="list-arr-footer">
+                                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            </ul>
+                            <h5 class="media">
+                                Stay with us</h5>
+                            <ul class="list-arr-footer media-list">
+                                <li style="width: 109px;"><a id="fb" href="#">facebook</a></li>
+                                <li style="width: 94px;"><a id="yt" href="#">You Tube</a></li>
+                                <li style="width: 109px;"><a id="twi" href="#">Twitter</a></li>
+                                <li style="width: 94px;"><a id="fli" href="#">Flicker</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--left col end-->
+                    <!--right col start-->
+                    <div class="foot-right">
+                        <div class="mod">
+                            <h2 class="white">
+                                Quick Contact</h2>
+                            <div class="clr border">
+                            </div>
+                            <ul class="list-add">
+                                <li id="first" style="text-transform:uppercase;">SAFEWAY Steel Construction Establishments <pre>       </pre></li>
+                                <br />
+                                <li><span style="width: 55px; float: left;">Phone:</span> +971(0)2 5513833, +971(0)50 6628775 </li>
+                                <li><span style="width: 55px; float: left;">Fax:</span>+971 2 6334436 </li>
+                                <li><span style="width: 55px; float: left;">Email:</span><a style="color: #D5D4D4;"
+                                    href="mailto:Email: sales@safewaygroups.com"> sales@safewaygroups.com</a> </li>
+                                <!--<li>Address: Lulu Street, </li>
+<li>Marina Plaza Building,</li>
+<li>P.O.Box 29861,</li>
+<li>Abu Dhabi, UAE.</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <!--right col end-->
+                </div>
+            </div>
+            <div class="content footer-sub">
+                <div class="wrapper">
+                    <!--left col start-->
+                    <div class="mod">
+                        <ul class="list-copyright">
+                            <li><a href="#">&copy; 2011 SAFEWAY Group.</a></li>
+                            <li><a href="#">All Rights Reserved</a></li>
+                        </ul>
+                        <ul style="float: right;" class="list-copyright">
+                            <li><a href="http://www.safewaygroups.com/">Designed by SAFEWAYGROUPS</a></li>
+                        </ul>
+                    </div>
+                    <!--left col end-->
+                </div>
+            </div>
+        </div>
+        <!--footer div ends-->
+    </div>
+    <!--main div ends-->
+</body>
+</html>
